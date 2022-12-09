@@ -1,3 +1,10 @@
+/* GLOBAL VARIABLES */
+
+:root {
+  --white: #fafaff;
+  --black: #333533;
+}
+
 /* LANDING PAGE */
 
 .landing-page {
@@ -16,4 +23,28 @@
   font-size: 150px;
   font-family: 'Raleway', sans-serif;
   font-style: italic;
+  color: var(--black)
+}
+
+/* LOGIN SECTION */
+
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-header {
+  font-size: 300%;
+}
+
+.form-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+  gap: 12%;
 }
