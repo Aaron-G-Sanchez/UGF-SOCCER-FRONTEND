@@ -1,6 +1,6 @@
 import Login from '../components/Login'
 
-const Landing = () => {
+const Landing = ({ setUser }) => {
   return (
     <>
       <main className="landing-page">
@@ -8,7 +8,7 @@ const Landing = () => {
           <h1 className="title">UGF SOCCER.</h1>
         </section>
         <section className="login">
-          <Login />
+          <Login setUser={setUser} />
         </section>
       </main>
     </>

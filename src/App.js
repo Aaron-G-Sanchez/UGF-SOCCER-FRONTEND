@@ -1,12 +1,14 @@
-import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Landing from './pages/Landing'
+import { useState, useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
+  const [user, setUser] = useState(null)
   return (
     <>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/" element={<Landing setUser={setUser} />} />
       </Routes>
     </>
   )
