@@ -1,9 +1,13 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import Landing from './pages/Landing'
 
 const App = () => {
   return (
     <>
-      <div>Welcome to react</div>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+      </Routes>
     </>
   )
 }
