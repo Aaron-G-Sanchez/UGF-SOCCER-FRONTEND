@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
   const [user, setUser] = useState(null)
+  console.log(user)
   return (
     <>
       <Routes>
