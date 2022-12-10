@@ -16,6 +16,7 @@ const Login = ({ setUser }) => {
     const payload = await SignInUser(formValues)
     setUser(payload)
     setFormValues(initialState)
+    navigate('/home')
   }
 
   return (

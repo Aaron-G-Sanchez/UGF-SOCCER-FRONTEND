@@ -9,3 +9,12 @@ export const SignInUser = async (data) => {
     throw error
   }
 }
+
+export const CheckSession = async () => {
+  try {
+    const response = await Client.get('/auth/session')
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
