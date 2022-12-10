@@ -7,6 +7,7 @@ import { CheckSession } from './services/Auth'
 
 const App = () => {
   const [user, setUser] = useState(null)
+  const [league, setLeague] = useState(null)
 
   const checkToken = async () => {
     const user = await CheckSession()
@@ -24,7 +25,10 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Landing setUser={setUser} />} />
-        <Route path="/home" element={<Home user={user} />} />
+        <Route
+          path="/home"
+          element={<Home user={user} league={league} setLeague={setLeague} />}
+        />
       </Routes>
     </>
   )

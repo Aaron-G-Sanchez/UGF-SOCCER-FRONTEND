@@ -1,13 +1,28 @@
-const Home = ({ user }) => {
+import { useEffect } from 'react'
+import LeagueDisplay from '../components/LeagueDisplay'
+import { GetLeague } from '../services/Queries'
+
+const Home = ({ user, league, setLeague }) => {
+  const getLeague = async () => {
+    const league = await GetLeague()
+    setLeague(league)
+  }
+
+  useEffect(() => {
+    getLeague()
+  }, [])
+
   return user ? (
     <>
-      <div>{user.id}</div>
+      <main className="home-dash">
+        <LeagueDisplay league={league} />
+      </main>
     </>
   ) : (
     <>
-      <div>
+      <main>
         <p>You need to sign in</p>
-      </div>
+      </main>
     </>
   )
 }
