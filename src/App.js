@@ -1,6 +1,6 @@
 import './App.css'
-import Landing from './pages/Landing'
 import Home from './pages/Home'
+import Landing from './pages/Landing'
 import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { CheckSession } from './services/Auth'

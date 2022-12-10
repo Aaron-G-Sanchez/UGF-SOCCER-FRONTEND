@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import LeagueDisplay from '../components/LeagueDisplay'
+import UserInfo from '../components/UserInfo'
 import { GetLeague } from '../services/Queries'
 
 const Home = ({ user, league, setLeague }) => {
@@ -15,7 +16,8 @@ const Home = ({ user, league, setLeague }) => {
   return user ? (
     <>
       <main className="home-dash">
-        <LeagueDisplay league={league} />
+        <UserInfo />
+        <LeagueDisplay user={user} league={league} />
       </main>
     </>
   ) : (

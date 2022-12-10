@@ -3,6 +3,8 @@
 :root {
   --white: #fafaff;
   --black: #333533;
+  --carnelian: #B21F1E;
+
 }
 
 /* LANDING PAGE */
@@ -55,4 +57,12 @@
 .home-dash {
   height: 100vh;
   display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 3fr;
+}
+
+/* LEAGUE DISPLAY */
+
+.league-display {
+  color: var(--black);
 }
