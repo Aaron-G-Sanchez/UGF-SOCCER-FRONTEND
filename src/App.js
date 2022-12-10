@@ -17,7 +17,6 @@ const App = () => {
     const token = localStorage.getItem('token')
     if (token) {
       checkToken()
-      console.log('I have a token!')
     }
   }, [])
 
