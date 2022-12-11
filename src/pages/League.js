@@ -2,10 +2,10 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { GetLeagueById } from '../services/Queries'
 
-const League = ({ league, selectedLeague, setSelectedLeague }) => {
+const League = ({ selectedLeague, setSelectedLeague }) => {
   let { id } = useParams()
 
-  // currently works unless the page is refreshed
+  // currently works until the page is refreshed
   // const getLeague = (id) => {
   //   console.log(league?.leagues.find((league) => league._id === id))
   // }
@@ -23,7 +23,7 @@ const League = ({ league, selectedLeague, setSelectedLeague }) => {
     <>
       <main className="league-display">
         <section>
-          <h1>Selected league shi will display here</h1>
+          <h1>{selectedLeague?.league.name}</h1>
         </section>
       </main>
     </>

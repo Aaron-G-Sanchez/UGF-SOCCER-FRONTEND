@@ -9,7 +9,7 @@ const LeagueDisplay = ({ user, league }) => {
   //   console.log('looking for creator')
   // }
 
-  const getLeagueId = (id) => {
+  const selectLeague = (id) => {
     navigate(`/league/${id}`)
   }
 
@@ -23,7 +23,7 @@ const LeagueDisplay = ({ user, league }) => {
                 <div
                   className="league-card"
                   key={league._id}
-                  onClick={() => getLeagueId(league._id)}
+                  onClick={() => selectLeague(league._id)}
                 >
                   <p className="league-name">{league.name}</p>
                   <p className="league-creator">{`Created by: ${league.creator_id.name}`}</p>
