@@ -25,7 +25,7 @@ const Home = ({ user, league, setLeague, userData, setUserData }) => {
   return user ? (
     <>
       <main className="home-dash">
-        <UserInfo />
+        <UserInfo userData={userData} />
         <LeagueDisplay user={user} league={league} />
       </main>
     </>

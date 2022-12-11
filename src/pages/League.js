@@ -1,7 +1,31 @@
-const League = () => {
+import { useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { GetLeagueById } from '../services/Queries'
+
+const League = ({ league, selectedLeague, setSelectedLeague }) => {
+  let { id } = useParams()
+
+  // currently works unless the page is refreshed
+  // const getLeague = (id) => {
+  //   console.log(league?.leagues.find((league) => league._id === id))
+  // }
+
+  const getLeague = async (id) => {
+    const response = await GetLeagueById(id)
+    setSelectedLeague(response)
+  }
+
+  useEffect(() => {
+    getLeague(id)
+  }, [])
+
   return (
     <>
-      <div>This is the specific league page</div>
+      <main className="league-display">
+        <section>
+          <h1>Selected league shi will display here</h1>
+        </section>
+      </main>
     </>
   )
 }

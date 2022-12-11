@@ -17,3 +17,12 @@ export const GetLeague = async () => {
     throw error
   }
 }
+
+export const GetLeagueById = async (id) => {
+  try {
+    const response = await Client.get(`/league/${id}`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}

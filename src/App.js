@@ -10,6 +10,7 @@ const App = () => {
   const [user, setUser] = useState(null)
   const [userData, setUserData] = useState(null)
   const [league, setLeague] = useState(null)
+  const [selectedLeague, setSelectedLeague] = useState(null)
 
   const checkToken = async () => {
     const user = await CheckSession()
@@ -39,7 +40,16 @@ const App = () => {
             />
           }
         />
-        <Route path="/league/:id" element={<League />} />
+        <Route
+          path="/league/:id"
+          element={
+            <League
+              league={league}
+              selectedLeague={selectedLeague}
+              setSelectedLeague={setSelectedLeague}
+            />
+          }
+        />
       </Routes>
     </>
   )
