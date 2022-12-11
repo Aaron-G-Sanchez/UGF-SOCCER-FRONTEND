@@ -82,9 +82,44 @@
   
 }
 
-.league-display-title {
-  margin: 0;
+.league-title-button-wrapper {
   height: 5%;
+  display: flex;
+  width: 100%;
+  text-align: left;
+}
+
+.league-display-title-wrapper {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.league-display-title {
+  margin: 0 0 0 5% ;
+}
+
+.button-wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.add-league-button {
+  height: 80%;
+  width: 55%;
+  margin: 0 5% 0 0;
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+  transition: .3s;
+  border-radius: 15px;
+}
+
+.add-league-button:hover {
+  cursor: pointer;
+  width: 60%;
 }
 
 .leagues-wrapper {
@@ -94,8 +129,8 @@
   flex-direction: column;
   align-items: center;
   gap: 3%;
-  /* justify-content: center; */
-
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .league-card {
@@ -112,16 +147,7 @@
 }
 
 .league-card:hover {
-  border-left: solid 10px var(--red);
+  border-left: solid 20px var(--red);
   cursor: pointer;
 }
 
-/* come back and fix the height of the league cards */
-/* .league-name {
-  font-size: 110%;
-  margin: 0;
-}
-
-.league-creator {
-  margin: 0;
-} */

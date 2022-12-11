@@ -11,7 +11,7 @@ const Login = ({ setUser }) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
 
-  const onSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const payload = await SignInUser(formValues)
     setUser(payload)
@@ -23,7 +23,7 @@ const Login = ({ setUser }) => {
     <>
       <section className="login-wrapper">
         <h2 className="login-header">Login</h2>
-        <form className="form-body" onSubmit={onSubmit}>
+        <form className="form-body" onSubmit={handleSubmit}>
           <input
             onChange={handleChange}
             className="email"

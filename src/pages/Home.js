@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import LeagueDisplay from '../components/LeagueDisplay'
+import NewLeagueModal from '../components/NewLeagueModal'
 import UserInfo from '../components/UserInfo'
 import { GetLeague, GetUserData } from '../services/Queries'
 
@@ -27,6 +28,7 @@ const Home = ({ user, league, setLeague, userData, setUserData }) => {
       <main className="home-dash">
         <UserInfo userData={userData} />
         <LeagueDisplay user={user} league={league} />
+        <NewLeagueModal user={user} />
       </main>
     </>
   ) : (

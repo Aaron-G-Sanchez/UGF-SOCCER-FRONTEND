@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 
-const LeagueDisplay = ({ user, league }) => {
+const LeagueDisplay = ({ league }) => {
   let navigate = useNavigate()
   // as a test this fucntion looks at the logged in user and the creator of the league to see if the ids are the same
   // if (user.id === league.leagues[0].creator_id) {
@@ -16,7 +16,14 @@ const LeagueDisplay = ({ user, league }) => {
   return (
     <>
       <section className="league-display">
-        <h2 className="league-display-title">Leagues</h2>
+        <div className="league-title-button-wrapper">
+          <div className="league-display-title-wrapper">
+            <h2 className="league-display-title">Leagues</h2>
+          </div>
+          <div className="button-wrapper">
+            <button className="add-league-button">Create a league</button>
+          </div>
+        </div>
         <div className="leagues-wrapper">
           {league
             ? league.leagues.map((league) => (
