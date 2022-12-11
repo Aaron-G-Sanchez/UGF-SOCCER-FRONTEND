@@ -12,7 +12,9 @@ const LeagueDisplay = ({ user, league }) => {
         <h2 className="league-display-title">Leagues</h2>
         {league
           ? league.leagues.map((league) => (
-              <div key={league._id}>{league.name}</div>
+              <div className="league-card" key={league._id}>
+                <p>{league.name}</p>
+              </div>
             ))
           : null}
       </section>

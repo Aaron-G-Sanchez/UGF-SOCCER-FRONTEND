@@ -1,7 +1,7 @@
 const UserInfo = () => {
   return (
     <>
-      <div></div>
+      <section className="user-display">This is the user info shi</section>
     </>
   )
 }

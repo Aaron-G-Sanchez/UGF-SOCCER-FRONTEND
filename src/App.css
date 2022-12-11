@@ -1,10 +1,12 @@
 /* GLOBAL VARIABLES */
 
 :root {
-  --white: #fafaff;
+  --white: #EDF2F4;
+  --ghost-white: #fafaff;
   --black: #333533;
-  --carnelian: #B21F1E;
-
+  --red: #EF233C;
+  --shadow-blue: #8D99AE;
+  --purple: #2B2D42;
 }
 
 /* LANDING PAGE */
@@ -59,10 +61,34 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 3fr;
+  background-color: var(--shadow-blue);
+  color: var(--black);
+}
+
+/* USER INFO DISPLAY */
+
+.user-display {
+  background-color: var(--white);
 }
 
 /* LEAGUE DISPLAY */
 
 .league-display {
-  color: var(--black);
+  grid-row: 2/3;
+  background-color: var(--white);
+}
+
+.league-card {
+  height: 7%;
+  background-color: var(--purple);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+}
+
+.league-card:hover {
+  border-left: solid 10px var(--red);
 }
