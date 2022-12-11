@@ -13,7 +13,6 @@ const LeagueDisplay = ({ user, league }) => {
     navigate(`/league/${id}`)
   }
 
-  console.log(league)
   return (
     <>
       <section className="league-display">

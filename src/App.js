@@ -8,6 +8,7 @@ import { CheckSession } from './services/Auth'
 
 const App = () => {
   const [user, setUser] = useState(null)
+  const [userData, setUserData] = useState(null)
   const [league, setLeague] = useState(null)
 
   const checkToken = async () => {
@@ -28,7 +29,15 @@ const App = () => {
         <Route path="/" element={<Landing setUser={setUser} />} />
         <Route
           path="/home"
-          element={<Home user={user} league={league} setLeague={setLeague} />}
+          element={
+            <Home
+              user={user}
+              league={league}
+              setLeague={setLeague}
+              userData={userData}
+              setUserData={setUserData}
+            />
+          }
         />
         <Route path="/league/:id" element={<League />} />
       </Routes>
