@@ -5,6 +5,7 @@
   --ghost-white: #fafaff;
   --black: #333533;
   --red: #EF233C;
+  --dark-red: #D90429;
   --shadow-blue: #8D99AE;
   --purple: #2B2D42;
 }
@@ -91,4 +92,10 @@
 
 .league-card:hover {
   border-left: solid 10px var(--red);
+  cursor: pointer;
 }
+
+.league-name {
+  font-size: 110%;
+}
+
