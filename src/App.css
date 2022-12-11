@@ -80,7 +80,7 @@
 }
 
 .league-card {
-  height: 7%;
+  height: 15%;
   background-color: var(--purple);
   color: var(--white);
   display: flex;
@@ -90,12 +90,18 @@
   transition: .3s;
 }
 
+
 .league-card:hover {
   border-left: solid 10px var(--red);
   cursor: pointer;
 }
 
-.league-name {
+/* come back and fix the height of the league cards */
+/* .league-name {
   font-size: 110%;
+  margin: 0;
 }
 
+.league-creator {
+  margin: 0;
+} */

@@ -1,6 +1,7 @@
 import './App.css'
 import Home from './pages/Home'
 import Landing from './pages/Landing'
+import League from './pages/League'
 import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { CheckSession } from './services/Auth'
@@ -29,6 +30,7 @@ const App = () => {
           path="/home"
           element={<Home user={user} league={league} setLeague={setLeague} />}
         />
+        <Route path="/league/:id" element={<League />} />
       </Routes>
     </>
   )
