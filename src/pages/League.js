@@ -18,15 +18,15 @@ const League = ({ selectedLeague, setSelectedLeague }) => {
     getLeagueById(id)
   }, [])
 
-  // console.log(selectedLeague)
+  console.log(selectedLeague)
 
   return (
     <>
       <main className="league-details-dash">
         <LeagueInfo selectedLeague={selectedLeague} />
-        <LeagueMembers />
-        <TeamDisplay />
-        <PlayerDisplay />
+        <LeagueMembers selectedLeague={selectedLeague} />
+        <TeamDisplay selectedLeague={selectedLeague} />
+        <PlayerDisplay selectedLeague={selectedLeague} />
       </main>
     </>
   )
