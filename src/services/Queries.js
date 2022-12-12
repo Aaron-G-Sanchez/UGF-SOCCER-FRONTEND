@@ -35,3 +35,11 @@ export const CreateLeague = async (name, creator_id) => {
     throw error
   }
 }
+
+export const AddMembers = async (id, newMember) => {
+  try {
+    const response = await Client.put(`league/${id}`, { newMember })
+  } catch (error) {
+    throw error
+  }
+}
