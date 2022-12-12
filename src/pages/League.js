@@ -14,6 +14,7 @@ const League = ({
   setPlayers
 }) => {
   const [toggle, setToggle] = useState(false)
+  const [isActive, setIsActive] = useState(false)
 
   let { id } = useParams()
 
@@ -46,7 +47,12 @@ const League = ({
         />
         <LeagueMembers selectedLeague={selectedLeague} />
         <TeamDisplay selectedLeague={selectedLeague} />
-        <PlayerDisplay selectedLeague={selectedLeague} players={players} />
+        <PlayerDisplay
+          selectedLeague={selectedLeague}
+          players={players}
+          isActive={isActive}
+          setIsActive={setIsActive}
+        />
       </main>
     </>
   )

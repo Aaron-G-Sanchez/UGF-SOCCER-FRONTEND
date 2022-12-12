@@ -1,4 +1,6 @@
-const PlayerDisplay = ({ players }) => {
+import PlayerCard from './PlayerCard'
+
+const PlayerDisplay = ({ players, isActive, setIsActive }) => {
   return (
     <>
       <section className="player-display">
@@ -6,9 +8,7 @@ const PlayerDisplay = ({ players }) => {
         <div className="player-wrapper">
           {players
             ? players.players.map((player) => (
-                <div key={player._id} className="player-card">
-                  <p className="player-name">{player.name}</p>
-                </div>
+                <PlayerCard key={player._id} player={player.name} />
               ))
             : null}
         </div>
