@@ -32,7 +32,7 @@ const League = ({
     getPlayers()
   }, [])
 
-  console.log(players)
+  console.log(selectedLeague)
 
   return (
     <>

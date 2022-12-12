@@ -1,7 +1,7 @@
 const TeamDisplay = () => {
   return (
     <>
-      <section className="team-display">
+      {/* <section className="team-display">
         <h1> Team info will show here</h1>
         <div className="pitch">
           <div className="forwards">
@@ -21,7 +21,8 @@ const TeamDisplay = () => {
             <div className="player-shield"></div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <section className="team-display"></section>
     </>
   )
 }

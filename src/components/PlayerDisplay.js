@@ -14,6 +14,7 @@ const PlayerDisplay = ({ players }) => {
                   position={player.position}
                   number={player.number}
                   team={player.team}
+                  id={player._id}
                 />
               ))
             : null}

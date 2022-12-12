@@ -20,9 +20,11 @@
 @keyframes player-info-fade {
   0% {
     opacity: 0;
+
   }
   100% {
     opacity: 1;
+
   }
   
 }
@@ -191,6 +193,35 @@
 .league-members-display {
   grid-row: 2;
   background-color: var(--white);
+  width: 100%;
+  overflow: auto;
+}
+
+.members-wrapper {
+  height: 95%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3%;
+  overflow-x: hidden;
+}
+
+.member-card {
+  height: 15%;
+  width: 100%;
+  background-color: var(--purple);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+}
+
+.member-card:hover {
+  border-left: solid 20px var(--red);
+  cursor: pointer;
 }
 
 
@@ -205,7 +236,7 @@
   
 }
 
-.pitch {
+/* .pitch {
   background-color: var(--green);
   height: 90%;
   display: grid;
@@ -222,8 +253,8 @@
 
 .midfield {
     display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
 }
 
 .defense {
@@ -237,7 +268,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-}
+} */
 
 
 /* PLAYER DISPLAY */
@@ -271,6 +302,7 @@
   justify-content: center;
   width: 100%;
   user-select: none;
+  
 }
 
 .player-card:hover {
@@ -281,6 +313,8 @@
   background: var(--red);
   width: 100%;
   animation: player-info-fade .3s ease-in-out ;
+  margin-top: -6.5%;
+  color: var(--white);
 }
 
 
