@@ -10,6 +10,11 @@
   --purple: #2B2D42;
   --green: #73a580;
   --dark-green: #003e1f;
+  --white-low-op: rgba(237, 242, 244, .5);
+}
+
+::-webkit-scrollbar{
+  display: none;
 }
 
 /* LANDING PAGE */
@@ -182,5 +187,24 @@
 /* LEAGUE TEAMS DISPLAY  */
 
 /* PLAYER DISPLAY */
+
+.player-display {
+  grid-row: 1/3;
+  grid-column: 3;
+  overflow: auto;
+  background-color: var(--white-low-op);
+  margin: 3%;
+  border-radius: 15px;
+}
+
+.player-wrapper {
+  height: 100%;
+}
+
+.player-card {
+  height: 10%;
+  background-color: var(--purple);
+  color: var(--white);
+}
 
 /* LEAUGE FUTURE MATCH UPS  */

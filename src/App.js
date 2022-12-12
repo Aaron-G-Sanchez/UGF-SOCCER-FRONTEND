@@ -11,6 +11,7 @@ const App = () => {
   const [userData, setUserData] = useState(null)
   const [league, setLeague] = useState(null)
   const [selectedLeague, setSelectedLeague] = useState(null)
+  const [players, setPlayers] = useState(null)
 
   const checkToken = async () => {
     const user = await CheckSession()
@@ -49,6 +50,8 @@ const App = () => {
               user={user}
               selectedLeague={selectedLeague}
               setSelectedLeague={setSelectedLeague}
+              players={players}
+              setPlayers={setPlayers}
             />
           }
         />

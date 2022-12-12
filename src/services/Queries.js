@@ -27,6 +27,15 @@ export const GetLeagueById = async (id) => {
   }
 }
 
+export const GetPlayers = async () => {
+  try {
+    const response = await Client.get('/players')
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
+
 export const CreateLeague = async (name, creator_id) => {
   try {
     const response = await Client.post('/league', { name, creator_id })
@@ -36,6 +45,7 @@ export const CreateLeague = async (name, creator_id) => {
   }
 }
 
+//Try returning the response.data here and taking away the function call in the component
 export const AddMembers = async (id, newMember) => {
   try {
     const response = await Client.put(`league/${id}`, { newMember })
