@@ -1,6 +1,6 @@
 import PlayerCard from './PlayerCard'
 
-const PlayerDisplay = ({ players, isActive, setIsActive }) => {
+const PlayerDisplay = ({ players }) => {
   return (
     <>
       <section className="player-display">
