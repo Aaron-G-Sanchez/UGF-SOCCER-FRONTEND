@@ -46,6 +46,7 @@ const App = () => {
           path="/league/:id"
           element={
             <League
+              user={user}
               selectedLeague={selectedLeague}
               setSelectedLeague={setSelectedLeague}
             />
