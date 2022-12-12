@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import LeagueDisplay from '../components/LeagueDisplay'
 import NewLeagueModal from '../components/NewLeagueModal'
 import UserInfo from '../components/UserInfo'
@@ -13,6 +13,8 @@ const Home = ({
   selectedLeague,
   setSelectedLeague
 }) => {
+  const [isActive, setIsActive] = useState(false)
+
   const getLeague = async () => {
     const league = await GetLeague()
     setLeague(league)
@@ -40,6 +42,9 @@ const Home = ({
           user={user}
           selectedLeague={selectedLeague}
           setSelectedLeague={setSelectedLeague}
+          isActive={isActive}
+          setIsActive={setIsActive}
+          getLeague={getLeague}
         />
       </main>
     </>
