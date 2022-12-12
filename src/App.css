@@ -9,6 +9,7 @@
   --shadow-blue: #8D99AE;
   --purple: #2B2D42;
   --green: #73a580;
+  --dark-green: #003e1f;
 }
 
 /* LANDING PAGE */
@@ -154,12 +155,12 @@
 
 /* SPECIFC LEAGUE DETAILS PAGE */
 
-.league-details {
+.league-details-dash {
   height: 100vh;
   background-color: var(--shadow-blue);
   color: var(--black);
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 3fr;
   
 }
@@ -167,12 +168,15 @@
 /* LEAGUE CREATOR INFO  */
 
 .league-creator-info {
-  background-color: var(--ghost-white);
+  background-color: var(--white);
 }
 
 
 /* LEAGUE MEMBERS DISPLAY  */
-
+.league-members-display {
+  grid-row: 2;
+  background-color: var(--white);
+}
 
 
 /* LEAGUE TEAMS DISPLAY  */

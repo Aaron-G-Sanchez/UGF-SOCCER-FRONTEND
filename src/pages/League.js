@@ -1,6 +1,10 @@
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { GetLeagueById } from '../services/Queries'
+import LeagueInfo from '../components/LeagueInfo'
+import LeagueMembers from '../components/LeagueMembers'
+import TeamDisplay from '../components/TeamDisplay'
+import PlayerDisplay from '../components/PlayerDisplay'
 
 const League = ({ selectedLeague, setSelectedLeague }) => {
   let { id } = useParams()
@@ -14,16 +18,15 @@ const League = ({ selectedLeague, setSelectedLeague }) => {
     getLeagueById(id)
   }, [])
 
-  console.log(selectedLeague)
+  // console.log(selectedLeague)
 
   return (
     <>
-      {/* TURN THIS SHI INTO components */}
-
-      <main className="league-details">
-        <section className="league-creator-info">
-          <h1>{selectedLeague?.league.name}</h1>
-        </section>
+      <main className="league-details-dash">
+        <LeagueInfo selectedLeague={selectedLeague} />
+        <LeagueMembers />
+        <TeamDisplay />
+        <PlayerDisplay />
       </main>
     </>
   )
