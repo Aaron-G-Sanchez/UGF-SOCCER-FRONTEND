@@ -8,7 +8,13 @@ const PlayerDisplay = ({ players }) => {
         <div className="player-wrapper">
           {players
             ? players.players.map((player) => (
-                <PlayerCard key={player._id} player={player.name} />
+                <PlayerCard
+                  key={player._id}
+                  player={player.name}
+                  position={player.position}
+                  number={player.number}
+                  team={player.team}
+                />
               ))
             : null}
         </div>

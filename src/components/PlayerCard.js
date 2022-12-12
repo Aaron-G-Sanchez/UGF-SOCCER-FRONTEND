@@ -1,6 +1,6 @@
 import PlayerInfo from './PlayerInfo'
 import { useState } from 'react'
-const PlayerCard = ({ player }) => {
+const PlayerCard = ({ player, position, number, team }) => {
   const [isActive, setIsActive] = useState(false)
 
   const selectPlayer = () => {
@@ -11,8 +11,13 @@ const PlayerCard = ({ player }) => {
     <>
       <div className="player-card" onClick={() => selectPlayer()}>
         <p className="player-name">{player}</p>
-        <PlayerInfo isActive={isActive} />
       </div>
+      <PlayerInfo
+        isActive={isActive}
+        position={position}
+        number={number}
+        team={team}
+      />
     </>
   )
 }

@@ -1,8 +1,12 @@
-const PlayerInfo = ({ isActive, setIsActive }) => {
+const PlayerInfo = ({ isActive, position, number, team }) => {
   return isActive ? (
     <>
-      <div>player info will go here</div>
-      <button>add to team</button>
+      <div className="player-info">
+        <p>{number}</p>
+        <p>{position}</p>
+        <p>{team}</p>
+        <button>add to team</button>
+      </div>
     </>
   ) : null
 }
