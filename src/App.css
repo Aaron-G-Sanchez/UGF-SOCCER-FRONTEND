@@ -186,6 +186,50 @@
 
 /* LEAGUE TEAMS DISPLAY  */
 
+.team-display {
+  grid-row: 1/3;
+  grid-column: 2/3;
+  background-color: var(--white-low-op);
+  margin: 2%;
+  border-radius: 15px;
+  
+}
+
+.pitch {
+  background-color: var(--green);
+  height: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+}
+
+.forwards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.midfield {
+    display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: center;
+}
+
+.defense {
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.player-shield {
+  background-image: url('../public/assets/images/shield.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
 /* PLAYER DISPLAY */
 
 .player-display {
@@ -199,12 +243,18 @@
 
 .player-wrapper {
   height: 100%;
+  overflow-x: hidden;
 }
 
 .player-card {
   height: 10%;
   background-color: var(--purple);
   color: var(--white);
+  transition: .3s;
+}
+
+.player-card:hover {
+  border-right: solid 10px var(--red) ;
 }
 
 /* LEAUGE FUTURE MATCH UPS  */
