@@ -4,7 +4,15 @@ import NewLeagueModal from '../components/NewLeagueModal'
 import UserInfo from '../components/UserInfo'
 import { GetLeague, GetUserData } from '../services/Queries'
 
-const Home = ({ user, league, setLeague, userData, setUserData }) => {
+const Home = ({
+  user,
+  league,
+  setLeague,
+  userData,
+  setUserData,
+  selectedLeague,
+  setSelectedLeague
+}) => {
   const getLeague = async () => {
     const league = await GetLeague()
     setLeague(league)
@@ -28,7 +36,11 @@ const Home = ({ user, league, setLeague, userData, setUserData }) => {
       <main className="home-dash">
         <UserInfo userData={userData} />
         <LeagueDisplay user={user} league={league} />
-        <NewLeagueModal user={user} />
+        <NewLeagueModal
+          user={user}
+          selectedLeague={selectedLeague}
+          setSelectedLeague={setSelectedLeague}
+        />
       </main>
     </>
   ) : (

@@ -1,7 +1,10 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { CreateLeague } from '../services/Queries'
 
-const NewLeagueModal = ({ user }) => {
+const NewLeagueModal = ({ user, selectedLeague, setSelectedLeague }) => {
+  let navigate = useNavigate()
+
   const initialState = { name: '' }
   const [formValues, setFormValues] = useState(initialState)
 
@@ -12,10 +15,11 @@ const NewLeagueModal = ({ user }) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const newLeague = await CreateLeague(formValues.name, user.id)
-    console.log(newLeague)
+    setSelectedLeague(newLeague)
     setFormValues(initialState)
+    // navigate(`/league/${selectedLeague?.newLeague._id}`)
   }
-
+  console.log(selectedLeague)
   return (
     <>
       <section>

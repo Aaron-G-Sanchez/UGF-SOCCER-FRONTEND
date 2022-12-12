@@ -69,17 +69,17 @@
 /* USER INFO DISPLAY */
 
 .user-display {
+  grid-row: 1;
   background-color: var(--white);
 }
 
 /* LEAGUE DISPLAY */
 
 .league-display {
-  grid-row: 2/3;
+  grid-row: 2;
   background-color: var(--white);
-  height: 100%;
   width: 100%;
-  
+  overflow: auto;
 }
 
 .league-title-button-wrapper {
@@ -130,7 +130,7 @@
   align-items: center;
   gap: 3%;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .league-card {
