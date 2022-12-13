@@ -6,6 +6,7 @@ import LeagueMembers from '../components/LeagueMembers'
 import TeamDisplay from '../components/TeamDisplay'
 import PlayerDisplay from '../components/PlayerDisplay'
 import LeagueTeams from '../components/LeagueTeams'
+import NewTeamModal from '../components/NewTeamModal'
 
 const League = ({
   user,
@@ -33,12 +34,6 @@ const League = ({
     setPlayers(response)
   }
 
-  // const getTeamId = async (id) => {
-  //   if (teams) {
-  //     setSelectedTeam(teams.find((team) => team._id === id))
-  //   }
-  // }
-
   useEffect(() => {
     getLeagueById(id)
     getPlayers()
@@ -64,6 +59,8 @@ const League = ({
           selectedTeam={selectedTeam}
           id={id}
         />
+
+        <NewTeamModal />
       </main>
     </>
   )

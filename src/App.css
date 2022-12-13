@@ -11,6 +11,7 @@
   --green: #73a580;
   --dark-green: #003e1f;
   --white-low-op: rgba(237, 242, 244, .5);
+  --black-low-op: rgba(51, 53, 51, .5);
 }
 
 ::-webkit-scrollbar{
@@ -379,4 +380,23 @@ width: 80px;
 }
 
 
-/* LEAUGE FUTURE MATCH UPS  */
+/* NEW TEAM MODAL */
+
+.new-team-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black-low-op);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 3;
+}
+
+.modal-content {
+  background-color: var(--white);
+  width: 40%;
+  margin: 10%;
+}
