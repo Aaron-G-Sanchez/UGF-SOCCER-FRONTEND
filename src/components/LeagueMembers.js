@@ -2,7 +2,7 @@ const LeagueMembers = ({ selectedLeague }) => {
   return (
     <>
       <section className="league-members-display">
-        <h2>Members</h2>
+        <h2 className="members-title">Members</h2>
         <div className="members-wrapper">
           {selectedLeague
             ? selectedLeague?.league.members_id.map((member) => (

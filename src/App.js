@@ -12,7 +12,7 @@ const App = () => {
   const [league, setLeague] = useState(null)
   const [selectedLeague, setSelectedLeague] = useState(null)
   const [teams, setTeams] = useState(null)
-  const [usersTeam, setUsersTeam] = useState(null)
+  const [selectedTeam, setSelectedTeam] = useState(null)
   const [players, setPlayers] = useState(null)
 
   const checkToken = async () => {
@@ -56,8 +56,8 @@ const App = () => {
               setPlayers={setPlayers}
               teams={teams}
               setTeams={setTeams}
-              usersTeam={usersTeam}
-              setUsersTeam={setUsersTeam}
+              selectedTeam={selectedTeam}
+              setSelectedTeam={setSelectedTeam}
             />
           }
         />

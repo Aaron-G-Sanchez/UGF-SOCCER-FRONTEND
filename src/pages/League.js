@@ -15,8 +15,8 @@ const League = ({
   setPlayers,
   teams,
   setTeams,
-  usersTeam,
-  setUsersTeam
+  selectedTeam,
+  setSelectedTeam
 }) => {
   const [toggle, setToggle] = useState(false)
 
@@ -26,9 +26,6 @@ const League = ({
     const response = await GetLeagueById(id)
     setSelectedLeague(response)
     setTeams(response.league.teams_id)
-    setUsersTeam(
-      response.league.teams_id.find((team) => team.creator_id === user.id)
-    )
   }
 
   const getPlayers = async () => {
@@ -36,10 +33,16 @@ const League = ({
     setPlayers(response)
   }
 
+  // const getTeamId = async (id) => {
+  //   if (teams) {
+  //     setSelectedTeam(teams.find((team) => team._id === id))
+  //   }
+  // }
+
   useEffect(() => {
     getLeagueById(id)
     getPlayers()
-  }, [user])
+  }, [])
 
   return (
     <>
@@ -52,12 +55,8 @@ const League = ({
           toggle={toggle}
         />
         <LeagueMembers selectedLeague={selectedLeague} />
-        <LeagueTeams teams={teams} />
-        <TeamDisplay
-          user={user}
-          selectedLeague={selectedLeague}
-          teams={teams}
-        />
+        <LeagueTeams teams={teams} setSelectedTeam={setSelectedTeam} />
+        <TeamDisplay selectedTeam={selectedTeam} />
         <PlayerDisplay players={players} />
       </main>
     </>

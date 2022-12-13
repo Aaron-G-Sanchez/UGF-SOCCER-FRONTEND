@@ -196,8 +196,13 @@
   overflow: hidden;
 }
 
+.members-title {
+  margin-bottom: 1%;
+  text-align: left;
+}
+
 .members-wrapper {
-  /* height: 95%; */
+  height: 95%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -234,7 +239,8 @@
 
 
 .team-header{ 
-  margin: 0;
+  margin-bottom: 1%;
+  text-align: left;
 }
 
 .teams-wrapper {
@@ -268,9 +274,6 @@
 .team-display {
   grid-row: 1/4;
   grid-column: 2/3;
-  /* background-color: var(--green); */
-  margin: 2%;
-  border-radius: 15px;
   background: linear-gradient(45deg, hsla(136, 22%, 55%, 1) 0%, hsla(74, 32%, 60%, 1) 74%, hsla(47, 77%, 69%, 1) 100%);
 }
 
@@ -316,8 +319,8 @@
   grid-column: 3;
   overflow: hidden;
   background-color: var(--white-low-op);
-  margin: 20% 0% 20% 0%;
-  border-radius: 15px; 
+  /* margin: 20% 0% 20% 0%;
+  border-radius: 15px;  */
 }
 
 .player-wrapper {
