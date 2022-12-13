@@ -1,6 +1,6 @@
 import PlayerCard from './PlayerCard'
 
-const PlayerDisplay = ({ players }) => {
+const PlayerDisplay = ({ user, players, selectedTeam }) => {
   return (
     <>
       <section className="player-display">
@@ -9,12 +9,14 @@ const PlayerDisplay = ({ players }) => {
           {players
             ? players.players.map((player) => (
                 <PlayerCard
+                  user={user}
                   key={player._id}
                   player={player.name}
                   position={player.position}
                   number={player.number}
                   team={player.team}
                   id={player._id}
+                  selectedTeam={selectedTeam}
                 />
               ))
             : null}

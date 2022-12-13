@@ -57,7 +57,11 @@ const League = ({
         <LeagueMembers selectedLeague={selectedLeague} />
         <LeagueTeams teams={teams} setSelectedTeam={setSelectedTeam} />
         <TeamDisplay selectedTeam={selectedTeam} />
-        <PlayerDisplay players={players} />
+        <PlayerDisplay
+          user={user}
+          players={players}
+          selectedTeam={selectedTeam}
+        />
       </main>
     </>
   )

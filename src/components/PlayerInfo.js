@@ -1,15 +1,26 @@
-const PlayerInfo = ({ isActive, position, number, team, id }) => {
+const PlayerInfo = ({
+  user,
+  isActive,
+  position,
+  number,
+  team,
+  id,
+  selectedTeam
+}) => {
   const handleClick = (id) => {
     console.log(id)
   }
+
+  console.log(selectedTeam)
   return isActive ? (
     <>
       <div className="player-info">
         <p>#{number}</p>
         <p>{position}</p>
         <p>{team}</p>
-
-        <button onClick={() => handleClick(id)}>add to team</button>
+        {user?.id === selectedTeam?.creator_id ? (
+          <button>Add to team</button>
+        ) : null}
       </div>
     </>
   ) : null

@@ -274,7 +274,7 @@
 .team-display {
   grid-row: 1/4;
   grid-column: 2/3;
-  background: linear-gradient(45deg, hsla(136, 22%, 55%, 1) 0%, hsla(74, 32%, 60%, 1) 74%, hsla(47, 77%, 69%, 1) 100%);
+  background-color: var(--shadow-blue);
 }
 
 /* .pitch {
@@ -318,7 +318,7 @@
   grid-row: 1/4;
   grid-column: 3;
   overflow: hidden;
-  background-color: var(--white-low-op);
+  background-color: var(--white);
   /* margin: 20% 0% 20% 0%;
   border-radius: 15px;  */
 }
