@@ -61,6 +61,7 @@ const League = ({
           user={user}
           players={players}
           selectedTeam={selectedTeam}
+          id={id}
         />
       </main>
     </>

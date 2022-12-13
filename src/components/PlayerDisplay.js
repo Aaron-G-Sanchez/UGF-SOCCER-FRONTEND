@@ -1,6 +1,12 @@
+import { AddPlayer } from '../services/Queries'
 import PlayerCard from './PlayerCard'
 
 const PlayerDisplay = ({ user, players, selectedTeam }) => {
+  const handleClick = async (player_id) => {
+    const response = await AddPlayer(selectedTeam?._id, player_id)
+    console.log(response)
+  }
+
   return (
     <>
       <section className="player-display">
@@ -17,6 +23,7 @@ const PlayerDisplay = ({ user, players, selectedTeam }) => {
                   team={player.team}
                   id={player._id}
                   selectedTeam={selectedTeam}
+                  handleClick={handleClick}
                 />
               ))
             : null}

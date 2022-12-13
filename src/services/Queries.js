@@ -53,3 +53,12 @@ export const AddMembers = async (id, newMember) => {
     throw error
   }
 }
+
+export const AddPlayer = async (id, newPlayers) => {
+  try {
+    const response = await Client.put(`/team`, { id, newPlayers })
+    console.log(response.data)
+  } catch (error) {
+    throw error
+  }
+}

@@ -7,7 +7,8 @@ const PlayerCard = ({
   number,
   team,
   id,
-  selectedTeam
+  selectedTeam,
+  handleClick
 }) => {
   const [isActive, setIsActive] = useState(false)
 
@@ -28,6 +29,7 @@ const PlayerCard = ({
         team={team}
         id={id}
         selectedTeam={selectedTeam}
+        handleClick={handleClick}
       />
     </>
   )
