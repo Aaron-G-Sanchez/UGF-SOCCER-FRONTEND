@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 
-const LeagueDisplay = ({ league }) => {
+const LeagueDisplay = ({ league, setSelectedTeam }) => {
   let navigate = useNavigate()
   // as a test this fucntion looks at the logged in user and the creator of the league to see if the ids are the same
   // if (user.id === league.leagues[0].creator_id) {
@@ -11,6 +11,7 @@ const LeagueDisplay = ({ league }) => {
 
   const selectLeague = (id) => {
     navigate(`/league/${id}`)
+    setSelectedTeam(null)
   }
 
   return (

@@ -42,6 +42,7 @@ const App = () => {
               setUserData={setUserData}
               selectedLeague={selectedLeague}
               setSelectedLeague={setSelectedLeague}
+              setSelectedTeam={setSelectedTeam}
             />
           }
         />

@@ -196,6 +196,25 @@
   overflow: hidden;
 }
 
+.league-teams-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-team-button {
+  background-color: var(--red);
+  border: none;
+  width: 70px;
+  color: var(--white);
+  border-radius: 15px;
+  transition: .3s;
+}
+
+.add-team-button:hover {
+width: 80px;
+}
+
 .members-title {
   margin-bottom: 1%;
   text-align: left;

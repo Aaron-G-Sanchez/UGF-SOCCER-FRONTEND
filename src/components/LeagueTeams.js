@@ -5,10 +5,15 @@ const LeagueTeams = ({ teams, setSelectedTeam }) => {
     }
   }
 
+  const addTeam = async () => {}
+
   return (
     <>
       <section className="league-teams-display">
-        {teams ? <h2 className="team-header">Teams</h2> : null}
+        <div className="league-teams-title-wrapper">
+          <h2 className="team-header">Teams</h2>
+          <button className="add-team-button">Add team</button>
+        </div>
         <div className="teams-wrapper">
           {teams
             ? teams.map((team) => (
