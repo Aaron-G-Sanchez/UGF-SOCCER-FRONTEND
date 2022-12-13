@@ -5,6 +5,7 @@ import LeagueInfo from '../components/LeagueInfo'
 import LeagueMembers from '../components/LeagueMembers'
 import TeamDisplay from '../components/TeamDisplay'
 import PlayerDisplay from '../components/PlayerDisplay'
+import LeagueTeams from '../components/LeagueTeams'
 
 const League = ({
   user,
@@ -14,6 +15,7 @@ const League = ({
   setPlayers,
   teams,
   setTeams,
+  usersTeam,
   setUsersTeam
 }) => {
   const [toggle, setToggle] = useState(false)
@@ -37,7 +39,7 @@ const League = ({
   useEffect(() => {
     getLeagueById(id)
     getPlayers()
-  }, [])
+  }, [user])
 
   return (
     <>
@@ -50,6 +52,7 @@ const League = ({
           toggle={toggle}
         />
         <LeagueMembers selectedLeague={selectedLeague} />
+        <LeagueTeams teams={teams} />
         <TeamDisplay
           user={user}
           selectedLeague={selectedLeague}

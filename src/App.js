@@ -27,7 +27,6 @@ const App = () => {
     }
   }, [])
 
-  console.log(usersTeam)
   return (
     <>
       <Routes>
@@ -57,6 +56,7 @@ const App = () => {
               setPlayers={setPlayers}
               teams={teams}
               setTeams={setTeams}
+              usersTeam={usersTeam}
               setUsersTeam={setUsersTeam}
             />
           }
