@@ -39,7 +39,7 @@ const League = ({
     getLeagueById(id)
     getPlayers()
   }, [])
-
+  console.log(teams)
   return (
     <>
       <main className="league-details-dash">
@@ -65,7 +65,14 @@ const League = ({
           id={id}
         />
 
-        {isActive ? <NewTeamModal setIsActive={setIsActive} /> : null}
+        {isActive ? (
+          <NewTeamModal
+            setIsActive={setIsActive}
+            id={id}
+            setTeams={setTeams}
+            user={user}
+          />
+        ) : null}
       </main>
     </>
   )

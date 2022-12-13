@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { AddTeam } from '../services/Queries'
 
-const NewTeamModal = ({ setIsActive }) => {
+const NewTeamModal = ({ setIsActive, id, setTeams, user }) => {
   const initialState = { name: '' }
   const [formValues, setFormValues] = useState(initialState)
 
@@ -8,9 +9,13 @@ const NewTeamModal = ({ setIsActive }) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setIsActive(false)
+    const response = await AddTeam(id, formValues.name, user.id)
+    console.log(response)
+    setTeams(response.league.teams_id)
+    setFormValues(initialState)
   }
 
   return (
