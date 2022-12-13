@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 
-const LeagueDisplay = ({ league, setSelectedTeam }) => {
+const LeagueDisplay = ({ league, setSelectedTeam, setIsActive }) => {
   let navigate = useNavigate()
   // as a test this fucntion looks at the logged in user and the creator of the league to see if the ids are the same
   // if (user.id === league.leagues[0].creator_id) {
@@ -14,6 +14,10 @@ const LeagueDisplay = ({ league, setSelectedTeam }) => {
     setSelectedTeam(null)
   }
 
+  const createLeague = () => {
+    setIsActive(true)
+  }
+
   return (
     <>
       <section className="league-display">
@@ -22,7 +26,9 @@ const LeagueDisplay = ({ league, setSelectedTeam }) => {
             <h2 className="league-display-title">Leagues</h2>
           </div>
           <div className="button-wrapper">
-            <button className="add-league-button">Create a league</button>
+            <button className="add-league-button" onClick={createLeague}>
+              Create a league
+            </button>
           </div>
         </div>
         <div className="leagues-wrapper">

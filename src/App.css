@@ -379,6 +379,20 @@ width: 80px;
   z-index: 1;
 }
 
+/* NEW LEAGUE MODAL */
+
+.new-league-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black-low-op);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 
 /* NEW TEAM MODAL */
 
@@ -401,3 +415,5 @@ width: 80px;
   width: 40%;
   margin: 10%;
 }
+
+

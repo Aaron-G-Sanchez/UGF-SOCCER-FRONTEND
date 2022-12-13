@@ -38,15 +38,21 @@ const Home = ({
     <>
       <main className="home-dash">
         <UserInfo userData={userData} />
-        <LeagueDisplay league={league} setSelectedTeam={setSelectedTeam} />
-        <NewLeagueModal
-          user={user}
-          selectedLeague={selectedLeague}
-          setSelectedLeague={setSelectedLeague}
-          isActive={isActive}
+        <LeagueDisplay
+          league={league}
+          setSelectedTeam={setSelectedTeam}
           setIsActive={setIsActive}
-          getLeague={getLeague}
         />
+
+        {isActive ? (
+          <NewLeagueModal
+            user={user}
+            selectedLeague={selectedLeague}
+            setSelectedLeague={setSelectedLeague}
+            setIsActive={setIsActive}
+            getLeague={getLeague}
+          />
+        ) : null}
       </main>
     </>
   ) : (

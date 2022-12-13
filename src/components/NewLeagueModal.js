@@ -1,10 +1,8 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+
 import { CreateLeague, GetLeague } from '../services/Queries'
 
-const NewLeagueModal = ({ user, isActive, setIsActive, getLeague }) => {
-  let navigate = useNavigate()
-
+const NewLeagueModal = ({ user, setIsActive, getLeague }) => {
   const initialState = { name: '' }
   const [formValues, setFormValues] = useState(initialState)
 
@@ -16,26 +14,28 @@ const NewLeagueModal = ({ user, isActive, setIsActive, getLeague }) => {
     e.preventDefault()
     const newLeague = await CreateLeague(formValues.name, user.id)
     setFormValues(initialState)
-    setIsActive(!isActive)
+    setIsActive(false)
     getLeague()
   }
 
   return (
     <>
-      <section>
-        <form onSubmit={handleSubmit}>
+      <section className="new-league-modal">
+        <div className="modal-content">
           <h3>League Name</h3>
-          <h1>(WILL BE TURNED INTO A MODAL)</h1>
-          <input
-            onChange={handleChange}
-            className="form-league-name"
-            name="name"
-            type="text"
-            value={formValues.name}
-            placeholder="Name"
-          />
-          <button type="submit">Submit</button>
-        </form>
+          <form onSubmit={handleSubmit}>
+            <h1>(WILL BE TURNED INTO A MODAL)</h1>
+            <input
+              onChange={handleChange}
+              className="form-league-name"
+              name="name"
+              type="text"
+              value={formValues.name}
+              placeholder="Name"
+            />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </section>
     </>
   )
