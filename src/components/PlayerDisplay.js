@@ -1,10 +1,11 @@
 import { AddPlayer } from '../services/Queries'
 import PlayerCard from './PlayerCard'
 
-const PlayerDisplay = ({ user, players, selectedTeam }) => {
+const PlayerDisplay = ({ user, players, setSelectedTeam, selectedTeam }) => {
   const handleClick = async (player_id) => {
     const response = await AddPlayer(selectedTeam?._id, player_id)
-    console.log(response)
+    console.log(response.team)
+    setSelectedTeam(response.team)
   }
 
   return (

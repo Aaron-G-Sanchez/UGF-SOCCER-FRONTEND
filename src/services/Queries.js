@@ -57,7 +57,7 @@ export const AddMembers = async (id, newMember) => {
 export const AddPlayer = async (id, newPlayers) => {
   try {
     const response = await Client.put(`/team`, { id, newPlayers })
-    console.log(response.data)
+    return response.data
   } catch (error) {
     throw error
   }

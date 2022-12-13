@@ -60,6 +60,7 @@ const League = ({
         <PlayerDisplay
           user={user}
           players={players}
+          setSelectedTeam={setSelectedTeam}
           selectedTeam={selectedTeam}
           id={id}
         />
