@@ -1,18 +1,22 @@
-const LeagueTeams = ({ teams, setSelectedTeam }) => {
+const LeagueTeams = ({ teams, setSelectedTeam, setIsActive }) => {
   const getTeamId = async (id) => {
     if (teams) {
       setSelectedTeam(teams.find((team) => team._id === id))
     }
   }
 
-  const addTeam = async () => {}
+  const addTeam = async () => {
+    setIsActive(true)
+  }
 
   return (
     <>
       <section className="league-teams-display">
         <div className="league-teams-title-wrapper">
           <h2 className="team-header">Teams</h2>
-          <button className="add-team-button">Add team</button>
+          <button className="add-team-button" onClick={addTeam}>
+            Add team
+          </button>
         </div>
         <div className="teams-wrapper">
           {teams

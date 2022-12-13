@@ -19,9 +19,10 @@ const League = ({
   selectedTeam,
   setSelectedTeam
 }) => {
-  const [toggle, setToggle] = useState(false)
-
   let { id } = useParams()
+
+  const [toggle, setToggle] = useState(false)
+  const [isActive, setIsActive] = useState(false)
 
   const getLeagueById = async (id) => {
     const response = await GetLeagueById(id)
@@ -50,7 +51,11 @@ const League = ({
           toggle={toggle}
         />
         <LeagueMembers selectedLeague={selectedLeague} />
-        <LeagueTeams teams={teams} setSelectedTeam={setSelectedTeam} />
+        <LeagueTeams
+          teams={teams}
+          setSelectedTeam={setSelectedTeam}
+          setIsActive={setIsActive}
+        />
         <TeamDisplay selectedTeam={selectedTeam} />
         <PlayerDisplay
           user={user}
@@ -60,7 +65,7 @@ const League = ({
           id={id}
         />
 
-        <NewTeamModal />
+        {isActive ? <NewTeamModal setIsActive={setIsActive} /> : null}
       </main>
     </>
   )

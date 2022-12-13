@@ -397,6 +397,7 @@ width: 80px;
 
 .modal-content {
   background-color: var(--white);
+  height: 15%;
   width: 40%;
   margin: 10%;
 }
