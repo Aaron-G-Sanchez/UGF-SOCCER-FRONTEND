@@ -1,5 +1,4 @@
 import { useState } from 'react'
-
 import { CreateLeague, GetLeague } from '../services/Queries'
 
 const NewLeagueModal = ({ user, setIsActive, getLeague }) => {
@@ -22,9 +21,8 @@ const NewLeagueModal = ({ user, setIsActive, getLeague }) => {
     <>
       <section className="new-league-modal">
         <div className="modal-content">
-          <h3>League Name</h3>
+          <h1>League Name</h1>
           <form onSubmit={handleSubmit}>
-            <h1>(WILL BE TURNED INTO A MODAL)</h1>
             <input
               onChange={handleChange}
               className="form-league-name"

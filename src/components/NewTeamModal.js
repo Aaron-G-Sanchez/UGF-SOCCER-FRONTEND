@@ -1,4 +1,13 @@
+import { useState } from 'react'
+
 const NewTeamModal = ({ setIsActive }) => {
+  const initialState = { name: '' }
+  const [formValues, setFormValues] = useState(initialState)
+
+  const handleChange = (e) => {
+    setFormValues({ ...formValues, [e.target.name]: e.target.value })
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     setIsActive(false)
@@ -11,7 +20,14 @@ const NewTeamModal = ({ setIsActive }) => {
           <h1>Team Name</h1>
           <div className="modal-form">
             <form onSubmit={handleSubmit}>
-              <input placeholder="Team Name" />
+              <input
+                onChange={handleChange}
+                className="form-team-name"
+                name="name"
+                type="text"
+                value={formValues.name}
+                placeholder="Team Name"
+              />
               <button type="submit">Save</button>
             </form>
           </div>

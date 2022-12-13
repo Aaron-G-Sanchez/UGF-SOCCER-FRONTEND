@@ -18,7 +18,7 @@
   display: none;
 }
 
-@keyframes player-info-fade {
+@keyframes fade {
   0% {
     opacity: 0;
 
@@ -339,8 +339,8 @@ width: 80px;
   grid-column: 3;
   overflow: hidden;
   background-color: var(--white);
-  /* margin: 20% 0% 20% 0%;
-  border-radius: 15px;  */
+  /* margin: 20% 0% 20% 0%; */
+
 }
 
 .player-wrapper {
@@ -367,13 +367,13 @@ width: 80px;
 }
 
 .player-card:hover {
-  border-right: solid 10px var(--red) ;
+  border-right: solid 10px var(--red);
 }
 
 .player-info {
   background: var(--red);
   width: 100%;
-  animation: player-info-fade .3s ease-in-out ;
+  animation: fade .3s ease-in-out ;
   margin-top: -6.5%;
   color: var(--white);
   z-index: 1;
@@ -391,6 +391,7 @@ width: 80px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  animation: fade .3s ease-in-out;
 }
 
 
@@ -407,6 +408,7 @@ width: 80px;
   align-items: flex-start;
   justify-content: center;
   z-index: 3;
+  animation: fade .3s ease-in-out;
 }
 
 .modal-content {
