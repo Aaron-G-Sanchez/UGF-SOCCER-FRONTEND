@@ -11,7 +11,10 @@ const League = ({
   selectedLeague,
   setSelectedLeague,
   players,
-  setPlayers
+  setPlayers,
+  teams,
+  setTeams,
+  setUsersTeam
 }) => {
   const [toggle, setToggle] = useState(false)
 
@@ -19,7 +22,11 @@ const League = ({
 
   const getLeagueById = async (id) => {
     const response = await GetLeagueById(id)
-    await setSelectedLeague(response)
+    setSelectedLeague(response)
+    setTeams(response.league.teams_id)
+    setUsersTeam(
+      response.league.teams_id.find((team) => team.creator_id === user.id)
+    )
   }
 
   const getPlayers = async () => {
@@ -32,8 +39,6 @@ const League = ({
     getPlayers()
   }, [])
 
-  console.log(selectedLeague)
-
   return (
     <>
       <main className="league-details-dash">
@@ -45,8 +50,12 @@ const League = ({
           toggle={toggle}
         />
         <LeagueMembers selectedLeague={selectedLeague} />
-        <TeamDisplay selectedLeague={selectedLeague} />
-        <PlayerDisplay selectedLeague={selectedLeague} players={players} />
+        <TeamDisplay
+          user={user}
+          selectedLeague={selectedLeague}
+          teams={teams}
+        />
+        <PlayerDisplay players={players} />
       </main>
     </>
   )

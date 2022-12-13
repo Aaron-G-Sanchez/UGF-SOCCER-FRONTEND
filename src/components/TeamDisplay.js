@@ -1,28 +1,19 @@
-const TeamDisplay = () => {
+import { useEffect, useState } from 'react'
+
+const TeamDisplay = ({ user, teams }) => {
+  // if (teams && user) {
+  //   let { id } = user
+  //   // console.log(teams)
+  //   // console.log(id)
+  //   let usersTeam = teams.find((team) => team.creator_id === id)
+  //   console.log(usersTeam)
+  // }
+
   return (
     <>
-      {/* <section className="team-display">
-        <h1> Team info will show here</h1>
-        <div className="pitch">
-          <div className="forwards">
-            <div className="player-shield"></div>
-            <div className="player-shield"></div>
-            <div className="player-shield"></div>
-          </div>
-          <div className="midfield">
-            <div className="player-shield"></div>
-            <div className="player-shield"></div>
-            <div className="player-shield"></div>
-          </div>
-          <div className="defense">
-            <div className="player-shield"></div>
-            <div className="player-shield"></div>
-            <div className="player-shield"></div>
-            <div className="player-shield"></div>
-          </div>
-        </div>
-      </section> */}
-      <section className="team-display"></section>
+      <section className="team-display">
+        {/* {teams ? teams.map((team) => <div>{team.name}</div>) : null} */}
+      </section>
     </>
   )
 }
