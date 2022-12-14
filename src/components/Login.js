@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { SignInUser } from '../services/Auth'
 
-const Login = ({ setUser }) => {
+const Login = ({ setUser, setToggle }) => {
   let navigate = useNavigate()
   const initialState = { email: '', username: '', password: '' }
   const [formValues, setFormValues] = useState(initialState)
@@ -17,6 +17,10 @@ const Login = ({ setUser }) => {
     setUser(payload)
     setFormValues(initialState)
     navigate('/home')
+  }
+
+  const switchToggle = () => {
+    setToggle(false)
   }
 
   return (
@@ -48,7 +52,15 @@ const Login = ({ setUser }) => {
             placeholder="Password"
             value={formValues.password}
           />
-          <button type="submit">Submit</button>
+          <p>
+            Not a member? Sign up{' '}
+            <span className="register-navigation" onClick={switchToggle}>
+              here!
+            </span>
+          </p>
+          <button type="submit" className="login-submit">
+            Submit
+          </button>
         </form>
       </section>
     </>

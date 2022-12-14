@@ -13,7 +13,6 @@ const NewTeamModal = ({ setIsActive, id, setTeams, user }) => {
     e.preventDefault()
     setIsActive(false)
     const response = await AddTeam(id, formValues.name, user.id)
-    console.log(response)
     setTeams(response.league.teams_id)
     setFormValues(initialState)
   }
