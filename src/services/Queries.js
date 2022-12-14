@@ -66,7 +66,7 @@ export const AddPlayer = async (id, newPlayers) => {
 
 export const RemovePlayer = async (id, player) => {
   try {
-    const response = await Client.delete(`/team/${id}/${player}`)
+    const response = await Client.put(`/team/${id}`, { player })
     return response.data
   } catch (error) {
     throw error

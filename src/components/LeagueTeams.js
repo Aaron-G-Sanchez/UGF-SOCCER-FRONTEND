@@ -8,7 +8,7 @@ const LeagueTeams = ({ teams, setSelectedTeam, setIsActive }) => {
   const addTeam = async () => {
     setIsActive(true)
   }
-  console.log(teams)
+
   return (
     <>
       <section className="league-teams-display">

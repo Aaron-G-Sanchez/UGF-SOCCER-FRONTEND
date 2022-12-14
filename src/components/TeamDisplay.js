@@ -4,10 +4,8 @@ const TeamDisplay = ({ selectedTeam, setSelectedTeam }) => {
   const handleClick = async (id) => {
     const response = await RemovePlayer(selectedTeam?._id, id)
     setSelectedTeam(response.team)
-    console.log(response.team)
   }
 
-  // console.log(selectedTeam)
   return (
     <>
       <section className="team-display">

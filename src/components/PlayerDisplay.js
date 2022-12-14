@@ -6,7 +6,6 @@ const PlayerDisplay = ({ user, players, setSelectedTeam, selectedTeam }) => {
     const response = await AddPlayer(selectedTeam?._id, player_id)
     setSelectedTeam(response.team)
   }
-
   return (
     <>
       <section className="player-display">
