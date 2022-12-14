@@ -8,7 +8,6 @@ const PlayerInfo = ({
   selectedTeam,
   handleClick
 }) => {
-  console.log(selectedTeam)
   return isActive ? (
     <>
       <div className="player-info">

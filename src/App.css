@@ -13,6 +13,7 @@
   --white-low-op: rgba(237, 242, 244, .5);
   --black-low-op: rgba(51, 53, 51, .5);
   --shadow-blue-low-op: rgba(141, 153, 174, .5);
+  --green-low-op: rgba(115, 165, 128, .5);
 }
 
 ::-webkit-scrollbar{
@@ -452,6 +453,17 @@ width: 80px;
   justify-content: center;
 }
 
+.team-name {
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5%;
+  width: 90%;
+  color: var(--black);;
+}
+
+
 .players-wrapper {
   height: 100%;
   width: 90%;
@@ -460,6 +472,7 @@ width: 80px;
   justify-content: center;
   flex-wrap: wrap;
   gap: 5%;
+  background-color: var(--green);
 }
 .player-badge {
   background-image: url('../public/assets/images/New\ Test\ Shield.svg');

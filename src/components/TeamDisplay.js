@@ -9,7 +9,11 @@ const TeamDisplay = ({ selectedTeam, setSelectedTeam }) => {
   return (
     <>
       <section className="team-display">
-        {selectedTeam ? <div>{selectedTeam.name}</div> : null}
+        {selectedTeam ? (
+          <div className="team-name">
+            <h2>{selectedTeam.name}</h2>
+          </div>
+        ) : null}
         <div className="players-wrapper">
           {selectedTeam
             ? selectedTeam.players?.map((player) => (
