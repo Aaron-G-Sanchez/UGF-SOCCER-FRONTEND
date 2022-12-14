@@ -465,6 +465,27 @@ width: 80px;
   color: var(--white);
 }
 
+.team-player-name{
+  margin-bottom:0 ;
+}
+
+.player-position {
+  margin-top: 0;
+}
+
+.remove-player {
+  margin: 0;
+  background-color: var(--white);
+  color: var(--black);
+  border: none;
+  width: 15%;
+  transition: .3s;
+}
+
+.remove-player:hover {
+  width: 20%;
+}
+
 /* PLAYER DISPLAY */
 
 .player-display {

@@ -49,6 +49,7 @@ export const CreateLeague = async (name, creator_id) => {
 export const AddMembers = async (id, newMember) => {
   try {
     const response = await Client.put(`league/${id}`, { newMember })
+    console.log(response)
   } catch (error) {
     throw error
   }
@@ -57,6 +58,15 @@ export const AddMembers = async (id, newMember) => {
 export const AddPlayer = async (id, newPlayers) => {
   try {
     const response = await Client.put(`/team`, { id, newPlayers })
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const RemovePlayer = async (id, player) => {
+  try {
+    const response = await Client.delete(`/team/${id}/${player}`)
     return response.data
   } catch (error) {
     throw error

@@ -7,7 +7,7 @@ const LeagueMembers = ({ selectedLeague }) => {
           {selectedLeague
             ? selectedLeague?.league.members_id.map((member) => (
                 <div key={member._id} className="member-card">
-                  <p>{member.name}</p>
+                  <p>{member.username}</p>
                 </div>
               ))
             : null}
