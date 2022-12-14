@@ -40,7 +40,7 @@ const LeagueDisplay = ({ league, setSelectedTeam, setIsActive }) => {
                   onClick={() => selectLeague(league._id)}
                 >
                   <p className="league-name">{league.name}</p>
-                  <p className="league-creator">{`Created by: ${league.creator_id.name}`}</p>
+                  <p className="league-creator">{`Created by: ${league.creator_id.username}`}</p>
                 </div>
               ))
             : null}

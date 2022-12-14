@@ -39,7 +39,6 @@ const League = ({
     getLeagueById(id)
     getPlayers()
   }, [])
-  console.log(teams)
   return (
     <>
       <main className="league-details-dash">

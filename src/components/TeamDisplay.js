@@ -1,5 +1,4 @@
 const TeamDisplay = ({ selectedTeam }) => {
-  console.log(selectedTeam)
   return (
     <>
       <section className="team-display">

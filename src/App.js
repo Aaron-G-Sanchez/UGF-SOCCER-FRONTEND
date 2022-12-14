@@ -27,6 +27,11 @@ const App = () => {
     }
   }, [])
 
+  const handleLogout = () => {
+    setUser(null)
+    localStorage.clear()
+  }
+
   return (
     <>
       <Routes>
@@ -43,6 +48,7 @@ const App = () => {
               selectedLeague={selectedLeague}
               setSelectedLeague={setSelectedLeague}
               setSelectedTeam={setSelectedTeam}
+              handleLogout={handleLogout}
             />
           }
         />

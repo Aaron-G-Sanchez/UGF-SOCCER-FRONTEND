@@ -12,7 +12,8 @@ const Home = ({
   setUserData,
   selectedLeague,
   setSelectedLeague,
-  setSelectedTeam
+  setSelectedTeam,
+  handleLogout
 }) => {
   const [isActive, setIsActive] = useState(false)
 
@@ -37,7 +38,7 @@ const Home = ({
   return user ? (
     <>
       <main className="home-dash">
-        <UserInfo userData={userData} />
+        <UserInfo userData={userData} handleLogout={handleLogout} />
         <LeagueDisplay
           league={league}
           setSelectedTeam={setSelectedTeam}
