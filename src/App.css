@@ -339,25 +339,6 @@
   overflow: hidden;
 }
 
-.league-teams-title-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.add-team-button {
-  background-color: var(--red);
-  border: none;
-  width: 70px;
-  color: var(--white);
-  border-radius: 15px;
-  transition: .3s;
-}
-
-.add-team-button:hover {
-width: 80px;
-}
-
 .members-title {
   margin-bottom: 1%;
   text-align: left;
@@ -400,8 +381,33 @@ width: 80px;
 }
 
 
+.league-teams-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10%;
+  width: 100%;
+  margin: 0;
+}
+
+.add-team-button {
+  background-color: var(--red);
+  border: none;
+  width: 30%;
+  height: 70%;
+  color: var(--white);
+  border-radius: 15px;
+  transition: .3s;
+  margin: 0 5% 0 0 ;
+}
+
+.add-team-button:hover {
+  width: 35%;
+}
+
+
 .team-header{ 
-  margin-bottom: 1%;
+  margin: 0;
   text-align: left;
 }
 
@@ -486,6 +492,10 @@ width: 80px;
   align-items: center;
   justify-content: center;
   color: var(--white);
+}
+
+.player-badge:hover {
+  cursor: default;
 }
 
 .team-player-name{
