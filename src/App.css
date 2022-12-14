@@ -127,6 +127,43 @@
   width: 12%;
 }
 
+/* REGISER SECTION  */
+
+.register-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--shadow-blue);
+}
+
+.register-header {
+  font-size: 300%;
+  width: 50%;
+  height: 10%;
+  background-color: var(--white);
+  margin-bottom: 0;
+  color: var(--black);
+  border-radius: 20px 20px 0 0 ;
+}
+
+
+.register-submit {
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+  height: 8%;
+  width: 10%;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.register-submit:hover {
+  width: 12%;
+}
+
+
 /* USER DASH / HOME */
 
 .home-dash {
