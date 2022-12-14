@@ -55,7 +55,10 @@ const League = ({
           setSelectedTeam={setSelectedTeam}
           setIsActive={setIsActive}
         />
-        <TeamDisplay selectedTeam={selectedTeam} />
+        <TeamDisplay
+          selectedTeam={selectedTeam}
+          setSelectedTeam={setSelectedTeam}
+        />
         <PlayerDisplay
           user={user}
           players={players}
