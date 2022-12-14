@@ -2,8 +2,14 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Register = ({ setToggle }) => {
-  let navigate = useNavigate()
-  const initialState = { email: '', username: '', password: '' }
+  const initialState = {
+    first: '',
+    last: '',
+    email: '',
+    username: '',
+    password: '',
+    confrimPassword: ''
+  }
   const [formValues, setFormValues] = useState(initialState)
 
   const handleChange = (e) => {
@@ -13,13 +19,31 @@ const Register = ({ setToggle }) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setFormValues(initialState)
-    navigate('/')
+    setToggle(true)
   }
   return (
     <>
       <section className="register-wrapper">
         <h2 className="register-header">Register</h2>
-        <form className="form-body" onSubmit={handleSubmit}>
+        <form className="register-body" onSubmit={handleSubmit}>
+          <div className="name-wrapper">
+            <input
+              onChange={handleChange}
+              className="first"
+              name="first"
+              type="text"
+              placeholder="First Name"
+              value={formValues.first}
+            />
+            <input
+              onChange={handleChange}
+              className="last"
+              name="last"
+              type="text"
+              placeholder="Last Name"
+              value={formValues.last}
+            />
+          </div>
           <input
             onChange={handleChange}
             className="email"
@@ -47,10 +71,10 @@ const Register = ({ setToggle }) => {
           <input
             onChange={handleChange}
             className="password"
-            name="password"
+            name="confirmPassword"
             type="password"
             placeholder="Confirm password"
-            value={formValues.password}
+            value={formValues.confrimPassword}
           />
 
           <button type="submit" className="register-submit">

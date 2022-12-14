@@ -97,7 +97,7 @@
 .form-body > input {
   border: none;
   height: 7%;
-  width: 40%;
+  width: 35%;
   border-radius: 7px;
   padding-left: 2% ;
 }
@@ -143,17 +143,61 @@
   width: 50%;
   height: 10%;
   background-color: var(--white);
-  margin-bottom: 0;
+  margin: 0;
   color: var(--black);
   border-radius: 20px 20px 0 0 ;
 }
 
+.register-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  width: 50%;
+  gap: 12%;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 0 0 20px 20px;
+}
+
+.register-body > input {
+  border: none;
+  height: 4%;
+  width: 35%;
+  border-radius: 7px;
+  padding-left: 2%;
+}
+
+.name-wrapper {
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 4%;
+  gap: 7%
+}
+.first {
+  border: none;
+  width: 25%;
+  border-radius: 7px;
+  padding-left: 2%;
+  height: 100%;
+}
+
+.last {
+  border: none;
+  height: 100%;
+  width: 25%;
+  border-radius: 7px;
+  padding-left: 2%;
+}
 
 .register-submit {
   background-color: var(--red);
   color: var(--white);
   border: none;
-  height: 8%;
+  height: 5%;
   width: 10%;
   border-radius: 8px;
   transition: .3s;
