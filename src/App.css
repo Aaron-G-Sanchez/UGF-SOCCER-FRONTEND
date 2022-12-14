@@ -318,7 +318,7 @@
   background-color: var(--shadow-blue);
   color: var(--black);
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr 2fr 1fr;
 }
 
@@ -436,42 +436,34 @@ width: 80px;
   grid-row: 1/4;
   grid-column: 2/3;
   background-color: var(--shadow-blue);
-}
-
-/* .pitch {
-  background-color: var(--green);
-  height: 90%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-
-}
-
-.forwards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
-.midfield {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
+.players-wrapper {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5%;
 }
-
-.defense {
-  display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: center;
-}
-
-.player-shield {
-  background-image: url('../public/assets/images/shield.svg');
+.player-badge {
+  background-image: url('../public/assets/images/trial\ badge.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-} */
-
+  width: 20%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
 
 /* PLAYER DISPLAY */
 
