@@ -79,6 +79,7 @@
   margin-bottom: 0;
   color: var(--black);
   border-radius: 20px 20px 0 0 ;
+  z-index: 1;
 }
 
 .form-body {
@@ -92,6 +93,7 @@
   color: var(--black);
   background-color: var(--white);
   border-radius: 0 0 20px 20px;
+  box-shadow: 10px 0px 70px var(--black-low-op);
 }
 
 .form-body > input {
@@ -146,6 +148,7 @@
   margin: 0;
   color: var(--black);
   border-radius: 20px 20px 0 0 ;
+  z-index: 1;
 }
 
 .register-body {
@@ -159,7 +162,9 @@
   color: var(--black);
   background-color: var(--white);
   border-radius: 0 0 20px 20px;
+  box-shadow: 10px 0px 80px var(--black-low-op);
 }
+
 
 .register-body > input {
   border: none;
@@ -205,6 +210,10 @@
 
 .register-submit:hover {
   width: 12%;
+}
+
+.register-submit:disabled {
+  width: 10%;
 }
 
 

@@ -10,6 +10,19 @@ export const SignInUser = async (data) => {
   }
 }
 
+export const RegisterUsers = async ({ name, username, password, email }) => {
+  try {
+    const response = await Client.post('/auth/register', {
+      name,
+      username,
+      password,
+      email
+    })
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
 export const CheckSession = async () => {
   try {
     const response = await Client.get('/auth/session')

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { RegisterUsers } from '../services/Auth'
 
 const Register = ({ setToggle }) => {
   const initialState = {
@@ -8,7 +8,7 @@ const Register = ({ setToggle }) => {
     email: '',
     username: '',
     password: '',
-    confrimPassword: ''
+    confirmPassword: ''
   }
   const [formValues, setFormValues] = useState(initialState)
 
@@ -18,6 +18,13 @@ const Register = ({ setToggle }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    const response = await RegisterUsers({
+      name: `${formValues.first} ${formValues.last}`,
+      username: formValues.username,
+      email: formValues.email,
+      password: formValues.password
+    })
+    console.log(response)
     setFormValues(initialState)
     setToggle(true)
   }
@@ -74,10 +81,18 @@ const Register = ({ setToggle }) => {
             name="confirmPassword"
             type="password"
             placeholder="Confirm password"
-            value={formValues.confrimPassword}
+            value={formValues.confirmPassword}
           />
 
-          <button type="submit" className="register-submit">
+          <button
+            type="submit"
+            className="register-submit"
+            disabled={
+              !formValues.email ||
+              (!formValues.password &&
+                formValues.confirmPassword === formValues.password)
+            }
+          >
             Submit
           </button>
         </form>
