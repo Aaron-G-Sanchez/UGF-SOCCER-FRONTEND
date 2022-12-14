@@ -319,7 +319,7 @@
   color: var(--black);
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
 }
 
 /* LEAGUE CREATOR INFO  */
@@ -373,7 +373,7 @@ width: 80px;
 }
 
 .member-card {
-  height: 15%;
+  height: 20%;
   width: 100%;
   background-color: var(--purple);
   color: var(--white);
@@ -393,6 +393,7 @@ width: 80px;
 
 .league-teams-display {
   grid-row: 3;
+  grid-column: 1;
   width: 100%;
   background-color: var(--white);
   overflow: hidden;
@@ -405,9 +406,9 @@ width: 80px;
 }
 
 .teams-wrapper {
-  overflow-x: hidden;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -415,7 +416,7 @@ width: 80px;
 }
 
 .team-card {
-  height: 33%;
+  height: 20%;
   width: 100%;
   background-color: var(--purple);
   color: var(--white);
