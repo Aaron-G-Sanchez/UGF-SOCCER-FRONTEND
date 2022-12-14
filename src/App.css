@@ -462,7 +462,7 @@ width: 80px;
   gap: 5%;
 }
 .player-badge {
-  background-image: url('../public/assets/images/trial\ badge.svg');
+  background-image: url('../public/assets/images/New\ Test\ Shield.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -477,6 +477,10 @@ width: 80px;
 
 .team-player-name{
   margin-bottom:0 ;
+}
+
+.player-number {
+  margin: 3% 0 3% 0;
 }
 
 .player-position {
