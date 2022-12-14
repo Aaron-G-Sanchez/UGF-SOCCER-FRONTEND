@@ -415,7 +415,7 @@ width: 80px;
 }
 
 .team-card {
-  height: 20%;
+  height: 33%;
   width: 100%;
   background-color: var(--purple);
   color: var(--white);
@@ -430,6 +430,16 @@ width: 80px;
   cursor: pointer;
   
 }
+
+.team-card-name {
+  margin: 0;
+}
+
+.team-creator {
+  margin: 0;
+}
+
+
 /* LEAGUE TEAMS DISPLAY  */
 
 .team-display {
