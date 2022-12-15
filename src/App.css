@@ -607,4 +607,18 @@
   margin: 10%;
 }
 
+/* DELETE TEAM MODAL  */
 
+.remove-team-modal {
+    position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--black-low-op);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      z-index: 3;
+      animation: fade .3s ease-in-out;
+}

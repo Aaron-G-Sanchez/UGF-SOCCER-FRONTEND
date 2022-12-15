@@ -84,3 +84,11 @@ export const AddTeam = async (id, name, creator_id) => {
     throw error
   }
 }
+
+export const DeleteTeam = async (id) => {
+  try {
+    const response = await Client.delete(`/team/${id}`)
+  } catch (error) {
+    throw error
+  }
+}

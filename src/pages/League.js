@@ -7,6 +7,7 @@ import TeamDisplay from '../components/TeamDisplay'
 import PlayerDisplay from '../components/PlayerDisplay'
 import LeagueTeams from '../components/LeagueTeams'
 import NewTeamModal from '../components/NewTeamModal'
+import DeleteTeamModal from '../components/DeleteTeamModal'
 
 const League = ({
   user,
@@ -23,6 +24,7 @@ const League = ({
 
   const [toggle, setToggle] = useState(false)
   const [isActive, setIsActive] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   const getLeagueById = async (id) => {
     const response = await GetLeagueById(id)
@@ -48,6 +50,8 @@ const League = ({
           id={id}
           getLeagueById={getLeagueById}
           toggle={toggle}
+          selectedTeam={selectedTeam}
+          setIsOpen={setIsOpen}
         />
         <LeagueMembers selectedLeague={selectedLeague} />
         <LeagueTeams
@@ -75,6 +79,9 @@ const League = ({
             setTeams={setTeams}
             user={user}
           />
+        ) : null}
+        {isOpen ? (
+          <DeleteTeamModal setIsOpen={setIsOpen} selectedTeam={selectedTeam} />
         ) : null}
       </main>
     </>
