@@ -31,7 +31,10 @@ const NewLeagueModal = ({ user, setIsActive, getLeague }) => {
               value={formValues.name}
               placeholder="Name"
             />
-            <button type="submit">Submit</button>
+            <div className="modal-controls">
+              <button onClick={() => setIsActive(false)}>Cancel</button>
+              <button type="submit">Submit</button>
+            </div>
           </form>
         </div>
       </section>

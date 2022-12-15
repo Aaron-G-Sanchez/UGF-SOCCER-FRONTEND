@@ -32,7 +32,10 @@ const NewTeamModal = ({ setIsActive, id, setTeams, user }) => {
                 value={formValues.name}
                 placeholder="Team Name"
               />
-              <button type="submit">Save</button>
+              <div className="modal-controls">
+                <button onClick={() => setIsActive(false)}>Cancel</button>
+                <button type="submit">Save</button>
+              </div>
             </form>
           </div>
         </div>
