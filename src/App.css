@@ -345,6 +345,14 @@
   background-color: var(--white);
 }
 
+.back-button-wrapper {
+  display: flex;
+}
+
+.back-arrow:hover {
+  scale: 1.05;
+}
+
 .delete-team-button {
   background-color: var(--red);
   color: var(--white);
@@ -397,8 +405,8 @@
 }
 
 .member-card:hover {
-  border-left: solid 20px var(--red);
-  cursor: pointer;
+  /* border-left: solid 20px var(--red); */
+  cursor: default;
 }
 
 /* LEAGUE TEAMS DISPLAY LIST */
@@ -463,6 +471,7 @@
   justify-content: center;
   transition: .3s;
 }
+
 .team-card:hover {
   border-left: solid 20px var(--red);
   cursor: pointer;
@@ -651,15 +660,15 @@
 /* DELETE TEAM MODAL  */
 
 .remove-team-modal {
-    position: fixed;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      background-color: var(--black-low-op);
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      z-index: 3;
-      animation: fade .3s ease-in-out;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black-low-op);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 3;
+  animation: fade .3s ease-in-out;
 }
