@@ -329,6 +329,20 @@
   background-color: var(--white);
 }
 
+.delete-team-button {
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+  border-radius: 15px;
+  height: 15%;
+  width: 25%;
+  transition: .3s;
+}
+
+.delete-team-button:hover {
+  width: 30%;
+}
+
 
 /* LEAGUE MEMBERS DISPLAY  */
 
