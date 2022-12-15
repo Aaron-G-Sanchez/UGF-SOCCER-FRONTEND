@@ -13,8 +13,6 @@
 
 #### By: &nbsp;Aaron Sanchez | [LinkedIn](https://www.linkedin.com/in/aaron-g-sanchez) | [GitHub](https://github.com/Aaron-G-Sanchez)
 
-&nbsp;
-
 ---
 
 ### **_Description_**
