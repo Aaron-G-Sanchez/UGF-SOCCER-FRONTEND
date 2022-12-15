@@ -1,6 +1,6 @@
 import { RemovePlayer } from '../services/Queries'
 
-const TeamDisplay = ({ selectedTeam, setSelectedTeam }) => {
+const TeamDisplay = ({ user, selectedTeam, setSelectedTeam }) => {
   const handleClick = async (id) => {
     const response = await RemovePlayer(selectedTeam?._id, id)
     setSelectedTeam(response.team)
@@ -21,12 +21,15 @@ const TeamDisplay = ({ selectedTeam, setSelectedTeam }) => {
                   <h2 className="team-player-name">{player.name}</h2>
                   <p className="player-number"># {player.number}</p>
                   <p className="player-position">{player.position}</p>
-                  <button
-                    className="remove-player"
-                    onClick={() => handleClick(player?._id)}
-                  >
-                    X
-                  </button>
+
+                  {user?.id === selectedTeam?.creator_id._id ? (
+                    <button
+                      className="remove-player"
+                      onClick={() => handleClick(player?._id)}
+                    >
+                      X
+                    </button>
+                  ) : null}
                 </div>
               ))
             : null}
